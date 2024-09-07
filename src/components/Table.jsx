@@ -1,5 +1,6 @@
 import React from "react";
-import { MdDeleteForever } from "react-icons/md";
+
+const defaultImage = "https://via.placeholder.com/80x60?text=80 X 60";
 
 const headerOfTable = [
   { label: "ID", value: "id" },
@@ -38,7 +39,7 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "20px",
               }}
             >
@@ -47,20 +48,22 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 14px",
                 minWidth: "100px",
+                display:"flex",
+                justifyContent:"center"
               }}
             >
               <img
-                src={item.image}
+                src={item.image || defaultImage}
                 alt={item.title}
-                style={{ width: "80px", height: "54px", objectFit: "cover" }}
+                style={{ width: "80px", height: "60px"}}
               />
             </td>
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "100px",
               }}
             >
@@ -69,7 +72,7 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "100px",
               }}
             >
@@ -78,7 +81,7 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "100px",
               }}
             >
@@ -87,7 +90,7 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "60px",
               }}
             >
@@ -96,7 +99,7 @@ const Table = ({ data, deleteHandle }) => {
             <td
               style={{
                 border: "1px solid #ddd",
-                padding: "12px",
+                padding: "7px 12px",
                 minWidth: "60px",
               }}
             >
@@ -117,3 +120,4 @@ const Table = ({ data, deleteHandle }) => {
 };
 
 export default Table;
+

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CgAdd } from "react-icons/cg";
 import Table from "../components/Table";
 
-const ProductsPage = ({ productsData ,deleteHandle}) => {
+const ProductsPage = ({ productsData ,deleteHandle,handleOpenPopup}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
 
@@ -18,11 +18,12 @@ const ProductsPage = ({ productsData ,deleteHandle}) => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  
 
   return (
     <div className="products-page-container">
       <div className="add-products-btn-contain">
-        <button className="add-product-btn">
+        <button className="add-product-btn" onClick={handleOpenPopup}>
           <CgAdd className="icon-btn" />
           Add Product
         </button>

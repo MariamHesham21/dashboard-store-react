@@ -8,7 +8,7 @@ import OrdersPage from "./OrdersPage";
 import CustomersPage from "./CustomersPage";
 import SettingPage from "./SettingPage";
 
-const HomePage = ({productsData,deleteHandle}) => {
+const HomePage = ({productsData,deleteHandle,handleOpenPopup}) => {
   const [selectedPage, setSelectedPage] = useState("products");
 
   /*const renderPage = () => {
@@ -60,7 +60,7 @@ const HomePage = ({productsData,deleteHandle}) => {
       {/*=============== Main Content ====================*/}
       <div className="mainSection-container">
         {/* {renderPage()} */}
-        {selectedPage === "products" && <ProductsPage productsData={productsData} deleteHandle={deleteHandle}/>}
+        {selectedPage === "products" && <ProductsPage productsData={productsData} deleteHandle={deleteHandle} handleOpenPopup={handleOpenPopup}/>}
         {selectedPage === "orders" && <OrdersPage />}
         {selectedPage === "customers" && <CustomersPage />}
         {selectedPage === "setting" && <SettingPage />}
