@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const defaultImage = "https://via.placeholder.com/80x60?text=80 X 60";
 
@@ -94,7 +95,7 @@ const Table = ({ data, deleteHandle }) => {
                 minWidth: "60px",
               }}
             >
-              <button className="table-button">Edit</button>
+              <Link to={`/edit/${item.id}`} className="table-button">Edit</Link>
             </td>
             <td
               style={{

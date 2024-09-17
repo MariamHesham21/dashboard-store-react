@@ -25,6 +25,10 @@ ul {
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* #636364 */
 /* Root Color Variables */
 :root {
@@ -275,6 +279,32 @@ li:hover {
   display: flex;
   justify-content: flex-end;
   margin-top: 15px;
+}
+/* ------------------------------------------------------------------- */
+/* Edit Section */
+/* ------------------------------------------------------------------- */
+.edit-page-contanier{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+}
+.editPage-contain{
+  width: 70%;
+  height: 70%;
+  margin: auto auto;
+  border: 1px solid #bdc3c7;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form-edit{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
